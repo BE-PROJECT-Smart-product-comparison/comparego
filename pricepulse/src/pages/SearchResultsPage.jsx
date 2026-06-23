@@ -1,5 +1,5 @@
 import { useSearchParams } from 'react-router-dom'
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useProductSearch } from '../hooks/useProductSearch'
 import ProductCard from '../components/product/ProductCard'
 import SortToggle from '../components/product/SortToggle'
@@ -24,6 +24,39 @@ export default function SearchResultsPage() {
           : b.highestRating - a.highestRating
       )
     : []
+
+  const [visibleCount, setVisibleCount] = useState(12)
+  const sentinelRef = useRef(null)
+
+  useEffect(() => {
+    setVisibleCount(12)
+  }, [query, sort])
+
+  useEffect(() => {
+    if (isLoading || isError || sorted.length <= visibleCount) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setVisibleCount((prev) => Math.min(prev + 12, sorted.length))
+        }
+      },
+      { rootMargin: '200px' }
+    )
+
+    const currentSentinel = sentinelRef.current
+    if (currentSentinel) {
+      observer.observe(currentSentinel)
+    }
+
+    return () => {
+      if (currentSentinel) {
+        observer.unobserve(currentSentinel)
+      }
+    }
+  }, [isLoading, isError, sorted.length, visibleCount])
+
+  const visibleProducts = sorted.slice(0, visibleCount)
 
   const handleToggleSelect = (product) => {
     if (selectedProducts.some((p) => p.id === product.id)) {
@@ -84,7 +117,7 @@ export default function SearchResultsPage() {
       )}
 
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {sorted.map((product) => (
+        {visibleProducts.map((product) => (
           <ProductCard
             key={product.id}
             product={product}
@@ -93,6 +126,14 @@ export default function SearchResultsPage() {
           />
         ))}
       </div>
+
+      {/* Sentinel element for infinite scroll */}
+      {sorted.length > visibleCount && (
+        <div ref={sentinelRef} className="py-8 flex flex-col items-center justify-center gap-2">
+          <div className="w-8 h-8 border-4 border-slate-200 border-t-primary rounded-full animate-spin" />
+          <p className="text-xs text-slate-500 dark:text-slate-400">Loading more products…</p>
+        </div>
+      )}
 
       {/* Floating comparison drawer */}
       {selectedProducts.length > 0 && (
