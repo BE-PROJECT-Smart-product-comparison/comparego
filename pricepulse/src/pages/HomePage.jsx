@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom'
 import SearchBar from '../components/common/SearchBar'
 import { useThemeStore } from '../store/themeStore'
 import { formatPrice } from '../utils/formatPrice'
+import CategoryGrid from '../components/home/CategoryGrid'
 
 const POPULAR = ['iPhone 15', 'Samsung 65 inch TV', 'boAt earbuds', 'Realme 12 Pro', 'Laptop under 50000']
 
@@ -88,6 +89,9 @@ export default function HomePage() {
           ))}
         </div>
       </div>
+
+      {/* Popular Categories */}
+      <CategoryGrid />
 
       {/* Flipkart Popular Products (Left-aligned) */}
       <div className="w-full">
