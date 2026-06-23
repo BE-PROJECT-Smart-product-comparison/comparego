@@ -9,10 +9,10 @@ export default function HomePage() {
   return (
     <main className="flex flex-col items-center justify-center min-h-[80vh] px-4 text-center">
       {/* Hero */}
-      <div className="mb-10">
-        <h1 className="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white leading-tight mb-4">
-          🔍 <span className="text-primary">CompareGo</span>
-          <br />Smart Product Comparison
+      <div className="mb-10 flex flex-col items-center">
+        <img src="/logo.png" alt="CompareGo Logo" className="h-24 w-auto object-contain mb-6" />
+        <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white leading-tight mb-4">
+          Smart Product Comparison
         </h1>
         <p className="text-slate-500 dark:text-slate-400 text-lg max-w-lg mx-auto">
           Compare prices, ratings, and specifications in real-time across Amazon & Flipkart.

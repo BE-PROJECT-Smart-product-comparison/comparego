@@ -16,9 +16,8 @@ export default function AuthPage() {
       <div className="w-full max-w-sm">
         <div className="card p-8 flex flex-col gap-6">
           {/* Logo */}
-          <div className="text-center">
-            <span className="text-4xl">⚡</span>
-            <p className="text-sm text-slate-400 dark:text-slate-500 mt-1">PricePulse India</p>
+          <div className="flex flex-col items-center">
+            <img src="/logo.png" alt="CompareGo Logo" className="h-14 w-auto object-contain" />
           </div>
 
           {/* Google login */}

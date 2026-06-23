@@ -13,8 +13,7 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center gap-4">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 shrink-0">
-          <span className="text-2xl">⚡</span>
-          <span className="font-bold text-lg text-primary hidden sm:block">CompareGo</span>
+          <img src="/logo.png" alt="CompareGo Logo" className="h-9 w-auto object-contain" />
         </Link>
 
         {/* Search bar — grows to fill space */}
