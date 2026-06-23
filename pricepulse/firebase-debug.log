@@ -1,0 +1,131 @@
+[debug] [2026-06-23T18:55:28.468Z] ----------------------------------------------------------------------
+[debug] [2026-06-23T18:55:28.470Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\mahes\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2026-06-23T18:55:28.470Z] CLI Version:   15.22.1
+[debug] [2026-06-23T18:55:28.471Z] Platform:      win32
+[debug] [2026-06-23T18:55:28.471Z] Node Version:  v24.11.1
+[debug] [2026-06-23T18:55:28.471Z] Detected Agent: antigravity
+[debug] [2026-06-23T18:55:28.471Z] Time:          Wed Jun 24 2026 00:25:28 GMT+0530 (India Standard Time)
+[debug] [2026-06-23T18:55:28.471Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-06-23T18:55:30.435Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-06-23T18:55:30.436Z] > authorizing via signed-in user (mahipatil9696k@gmail.com)
+[debug] [2026-06-23T18:55:30.436Z] [iam] checking project smart-product-comparison for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2026-06-23T18:55:30.437Z] Checked if tokens are valid: true, expires at: 1782243315529
+[debug] [2026-06-23T18:55:30.437Z] Checked if tokens are valid: true, expires at: 1782243315529
+[debug] [2026-06-23T18:55:30.438Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/smart-product-comparison:testIamPermissions [none]
+[debug] [2026-06-23T18:55:30.438Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/smart-product-comparison:testIamPermissions  x-goog-user-project=smart-product-comparison
+[debug] [2026-06-23T18:55:30.438Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/smart-product-comparison:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-06-23T18:55:32.486Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/smart-product-comparison:testIamPermissions 200
+[debug] [2026-06-23T18:55:32.486Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/smart-product-comparison:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-06-23T18:55:32.487Z] Checked if tokens are valid: true, expires at: 1782243315529
+[debug] [2026-06-23T18:55:32.487Z] Checked if tokens are valid: true, expires at: 1782243315529
+[debug] [2026-06-23T18:55:32.487Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/smart-product-comparison [none]
+[debug] [2026-06-23T18:55:33.106Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/smart-product-comparison 200
+[debug] [2026-06-23T18:55:33.106Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/smart-product-comparison {"projectId":"smart-product-comparison","projectNumber":"6578035564","displayName":"Smart product comparison","name":"projects/smart-product-comparison","resources":{"hostingSite":"smart-product-comparison"},"state":"ACTIVE","etag":"1_40038fc4-f00e-4db8-9f7f-4b0efabd6895"}
+[info] 
+[info] === Deploying to 'smart-product-comparison'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2026-06-23T18:55:33.108Z] Checked if tokens are valid: true, expires at: 1782243315529
+[debug] [2026-06-23T18:55:33.108Z] Checked if tokens are valid: true, expires at: 1782243315529
+[debug] [2026-06-23T18:55:33.108Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/smart-product-comparison/sites/smart-product-comparison [none]
+[debug] [2026-06-23T18:55:34.481Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/smart-product-comparison/sites/smart-product-comparison 200
+[debug] [2026-06-23T18:55:34.482Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/smart-product-comparison/sites/smart-product-comparison {"name":"projects/smart-product-comparison/sites/smart-product-comparison","defaultUrl":"https://smart-product-comparison.web.app","type":"DEFAULT_SITE"}
+[debug] [2026-06-23T18:55:34.490Z] Checked if tokens are valid: true, expires at: 1782243315529
+[debug] [2026-06-23T18:55:34.490Z] Checked if tokens are valid: true, expires at: 1782243315529
+[debug] [2026-06-23T18:55:34.490Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/smart-product-comparison/versions [none]
+[debug] [2026-06-23T18:55:34.490Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/smart-product-comparison/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2026-06-23T18:55:36.180Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/smart-product-comparison/versions 200
+[debug] [2026-06-23T18:55:36.181Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/smart-product-comparison/versions {"name":"projects/6578035564/sites/smart-product-comparison/versions/d573bc1807dd23e3","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[smart-product-comparison]: beginning deploy... 
+[info] i  hosting[smart-product-comparison]: found 6 files in dist 
+[debug] [2026-06-23T18:55:36.200Z] [hosting] uploading with 200 concurrency
+[debug] [2026-06-23T18:55:36.216Z] Checked if tokens are valid: true, expires at: 1782243315529
+[debug] [2026-06-23T18:55:36.216Z] Checked if tokens are valid: true, expires at: 1782243315529
+[debug] [2026-06-23T18:55:36.217Z] [hosting] hash cache [ZGlzdA] stored for 6 files
+[debug] [2026-06-23T18:55:36.217Z] [hosting][hash queue][FINAL] {"max":13,"min":1,"avg":3.6666666666666665,"active":0,"complete":6,"success":6,"errored":0,"retried":0,"total":6,"elapsed":15}
+[debug] [2026-06-23T18:55:36.217Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/6578035564/sites/smart-product-comparison/versions/d573bc1807dd23e3:populateFiles [none]
+[debug] [2026-06-23T18:55:36.217Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/6578035564/sites/smart-product-comparison/versions/d573bc1807dd23e3:populateFiles {"files":{"/logo.png":"e894a8a75c8d1b56a745c723a779ff6f3c23cd4b356fa28a32709c8448fb5527","/logo-light.jpg":"d783fdbb9c5e6d32df4bd3a684a0da48cc5e04db1cd87461fcf7f1fd56047d13","/logo-dark.jpg":"f2c4949178536a80a67cc74322fe315a0ee8cdec1b965e174631c79aa3b0f8f5","/index.html":"46bdeeea8847d41d5b1e77159d71ff2b6f5d0205bb058b26052651e6b14e36b0","/assets/index-Bkfntf54.css":"cd53a35fd89eeacbba5d28f3b8262dd6cc2d380fc931c13bb3ace1423bb59695","/assets/index-BHTKYHJ_.js":"4d7fc76bcc6cb3172833d0786d91b392894846b8caebc614d475e49762b57f63"}}
+[info] i  hosting: adding files to version [0/6] (0%) 
+[info] i  hosting: adding files to version [0/6] (0%) 
+[debug] [2026-06-23T18:55:40.345Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/6578035564/sites/smart-product-comparison/versions/d573bc1807dd23e3:populateFiles 200
+[debug] [2026-06-23T18:55:40.346Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/6578035564/sites/smart-product-comparison/versions/d573bc1807dd23e3:populateFiles {"uploadRequiredHashes":["cd53a35fd89eeacbba5d28f3b8262dd6cc2d380fc931c13bb3ace1423bb59695","4d7fc76bcc6cb3172833d0786d91b392894846b8caebc614d475e49762b57f63","46bdeeea8847d41d5b1e77159d71ff2b6f5d0205bb058b26052651e6b14e36b0"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/smart-product-comparison/versions/d573bc1807dd23e3/files"}
+[debug] [2026-06-23T18:55:40.347Z] Checked if tokens are valid: true, expires at: 1782243315529
+[debug] [2026-06-23T18:55:40.347Z] Checked if tokens are valid: true, expires at: 1782243315529
+[debug] [2026-06-23T18:55:40.348Z] Checked if tokens are valid: true, expires at: 1782243315529
+[debug] [2026-06-23T18:55:40.348Z] Checked if tokens are valid: true, expires at: 1782243315529
+[debug] [2026-06-23T18:55:40.348Z] Checked if tokens are valid: true, expires at: 1782243315529
+[debug] [2026-06-23T18:55:40.348Z] Checked if tokens are valid: true, expires at: 1782243315529
+[debug] [2026-06-23T18:55:40.349Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/smart-product-comparison/versions/d573bc1807dd23e3/files/cd53a35fd89eeacbba5d28f3b8262dd6cc2d380fc931c13bb3ace1423bb59695 [none]
+[debug] [2026-06-23T18:55:40.349Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/smart-product-comparison/versions/d573bc1807dd23e3/files/cd53a35fd89eeacbba5d28f3b8262dd6cc2d380fc931c13bb3ace1423bb59695 [stream]
+[debug] [2026-06-23T18:55:40.351Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/smart-product-comparison/versions/d573bc1807dd23e3/files/4d7fc76bcc6cb3172833d0786d91b392894846b8caebc614d475e49762b57f63 [none]
+[debug] [2026-06-23T18:55:40.351Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/smart-product-comparison/versions/d573bc1807dd23e3/files/4d7fc76bcc6cb3172833d0786d91b392894846b8caebc614d475e49762b57f63 [stream]
+[debug] [2026-06-23T18:55:40.353Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/smart-product-comparison/versions/d573bc1807dd23e3/files/46bdeeea8847d41d5b1e77159d71ff2b6f5d0205bb058b26052651e6b14e36b0 [none]
+[debug] [2026-06-23T18:55:40.354Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/smart-product-comparison/versions/d573bc1807dd23e3/files/46bdeeea8847d41d5b1e77159d71ff2b6f5d0205bb058b26052651e6b14e36b0 [stream]
+[debug] [2026-06-23T18:55:40.356Z] [hosting][populate queue][FINAL] {"max":4132,"min":4132,"avg":4132,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":4140}
+[debug] [2026-06-23T18:55:40.357Z] [hosting] uploads queued: 3
+[info] i  hosting: uploading new files [0/3] (0%) 
+[info] i  hosting: uploading new files [0/3] (0%) 
+[info] i  hosting: uploading new files [0/3] (0%) 
+[info] i  hosting: uploading new files [0/3] (0%) 
+[debug] [2026-06-23T18:55:49.980Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/smart-product-comparison/versions/d573bc1807dd23e3/files/cd53a35fd89eeacbba5d28f3b8262dd6cc2d380fc931c13bb3ace1423bb59695 200
+[debug] [2026-06-23T18:55:49.980Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/smart-product-comparison/versions/d573bc1807dd23e3/files/cd53a35fd89eeacbba5d28f3b8262dd6cc2d380fc931c13bb3ace1423bb59695 [stream]
+[info] i  hosting: uploading new files [1/3] (33%) 
+[debug] [2026-06-23T18:55:50.723Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/smart-product-comparison/versions/d573bc1807dd23e3/files/46bdeeea8847d41d5b1e77159d71ff2b6f5d0205bb058b26052651e6b14e36b0 200
+[debug] [2026-06-23T18:55:50.723Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/smart-product-comparison/versions/d573bc1807dd23e3/files/46bdeeea8847d41d5b1e77159d71ff2b6f5d0205bb058b26052651e6b14e36b0 [stream]
+[info] i  hosting: uploading new files [2/3] (66%) 
+[debug] [2026-06-23T18:55:52.489Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/smart-product-comparison/versions/d573bc1807dd23e3/files/4d7fc76bcc6cb3172833d0786d91b392894846b8caebc614d475e49762b57f63 200
+[debug] [2026-06-23T18:55:52.490Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/smart-product-comparison/versions/d573bc1807dd23e3/files/4d7fc76bcc6cb3172833d0786d91b392894846b8caebc614d475e49762b57f63 [stream]
+[debug] [2026-06-23T18:55:52.490Z] [hosting][upload queue][FINAL] {"max":12143,"min":9634,"avg":10717.333333333334,"active":0,"complete":3,"success":3,"errored":0,"retried":0,"total":3,"elapsed":12144}
+[info] i  hosting: upload complete 
+[info] +  hosting[smart-product-comparison]: file upload complete 
+[debug] [2026-06-23T18:55:52.491Z] [hosting] deploy completed after 16306ms
+[debug] [2026-06-23T18:55:52.491Z] [
+  {
+    "config": {
+      "public": "dist",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "smart-product-comparison"
+    },
+    "version": "projects/6578035564/sites/smart-product-comparison/versions/d573bc1807dd23e3"
+  }
+]
+[info] i  hosting[smart-product-comparison]: finalizing version... 
+[debug] [2026-06-23T18:55:52.494Z] Checked if tokens are valid: true, expires at: 1782243315529
+[debug] [2026-06-23T18:55:52.494Z] Checked if tokens are valid: true, expires at: 1782243315529
+[debug] [2026-06-23T18:55:52.494Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/smart-product-comparison/versions/d573bc1807dd23e3 updateMask=status%2Cconfig
+[debug] [2026-06-23T18:55:52.494Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/smart-product-comparison/versions/d573bc1807dd23e3 {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2026-06-23T18:55:54.224Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/smart-product-comparison/versions/d573bc1807dd23e3 200
+[debug] [2026-06-23T18:55:54.224Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/smart-product-comparison/versions/d573bc1807dd23e3 {"name":"projects/6578035564/sites/smart-product-comparison/versions/d573bc1807dd23e3","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2026-06-23T18:55:35.963059Z","createUser":{"email":"mahipatil9696k@gmail.com"},"finalizeTime":"2026-06-23T18:55:55.117979Z","finalizeUser":{"email":"mahipatil9696k@gmail.com"}}
+[debug] [2026-06-23T18:55:54.224Z] [hosting] finalized version for smart-product-comparison:[object Object]
+[info] +  hosting[smart-product-comparison]: version finalized 
+[info] i  hosting[smart-product-comparison]: releasing new version... 
+[debug] [2026-06-23T18:55:54.225Z] Checked if tokens are valid: true, expires at: 1782243315529
+[debug] [2026-06-23T18:55:54.225Z] Checked if tokens are valid: true, expires at: 1782243315529
+[debug] [2026-06-23T18:55:54.225Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/smart-product-comparison/channels/live/releases versionName=projects%2F6578035564%2Fsites%2Fsmart-product-comparison%2Fversions%2Fd573bc1807dd23e3
+[debug] [2026-06-23T18:55:54.226Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/smart-product-comparison/channels/live/releases {}
+[debug] [2026-06-23T18:55:55.216Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/smart-product-comparison/channels/live/releases 200
+[debug] [2026-06-23T18:55:55.216Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/smart-product-comparison/channels/live/releases {"name":"projects/6578035564/sites/smart-product-comparison/channels/live/releases/1782240955388000","version":{"name":"projects/6578035564/sites/smart-product-comparison/versions/d573bc1807dd23e3","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2026-06-23T18:55:35.963059Z","createUser":{"email":"mahipatil9696k@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJ1Y-KJf64Vi9uJdHM2yADx9dkwLSYg412hEEbGWfOrLn82rw=mo"},"finalizeTime":"2026-06-23T18:55:55.117979Z","finalizeUser":{"email":"mahipatil9696k@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJ1Y-KJf64Vi9uJdHM2yADx9dkwLSYg412hEEbGWfOrLn82rw=mo"}},"type":"DEPLOY","releaseTime":"2026-06-23T18:55:55.388Z","releaseUser":{"email":"mahipatil9696k@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJ1Y-KJf64Vi9uJdHM2yADx9dkwLSYg412hEEbGWfOrLn82rw=mo"}}
+[debug] [2026-06-23T18:55:55.216Z] [hosting] release: {"name":"projects/6578035564/sites/smart-product-comparison/channels/live/releases/1782240955388000","version":{"name":"projects/6578035564/sites/smart-product-comparison/versions/d573bc1807dd23e3","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2026-06-23T18:55:35.963059Z","createUser":{"email":"mahipatil9696k@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJ1Y-KJf64Vi9uJdHM2yADx9dkwLSYg412hEEbGWfOrLn82rw=mo"},"finalizeTime":"2026-06-23T18:55:55.117979Z","finalizeUser":{"email":"mahipatil9696k@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJ1Y-KJf64Vi9uJdHM2yADx9dkwLSYg412hEEbGWfOrLn82rw=mo"}},"type":"DEPLOY","releaseTime":"2026-06-23T18:55:55.388Z","releaseUser":{"email":"mahipatil9696k@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJ1Y-KJf64Vi9uJdHM2yADx9dkwLSYg412hEEbGWfOrLn82rw=mo"}}
+[info] +  hosting[smart-product-comparison]: release complete 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/smart-product-comparison/overview
+[info] Hosting URL: https://smart-product-comparison.web.app
+[debug] [2026-06-23T18:56:02.783Z] Error: Timed out.
+    at Timeout.<anonymous> (C:\Users\mahes\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:313:49)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+[error] 
+[error] Error: An unexpected error has occurred.

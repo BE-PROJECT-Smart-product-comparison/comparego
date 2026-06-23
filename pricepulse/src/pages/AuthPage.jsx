@@ -19,7 +19,7 @@ export default function AuthPage() {
         <div className="card p-8 flex flex-col gap-6">
           {/* Logo */}
           <div className="flex flex-col items-center">
-            <img src={dark ? "/logo-dark.jpg" : "/logo-light.jpg"} alt="CompareGo Logo" className="h-14 w-auto object-contain" />
+            <img src="/logo.png" alt="CompareGo Logo" className="h-20 w-auto object-contain" />
           </div>
 
           {/* Google login */}
