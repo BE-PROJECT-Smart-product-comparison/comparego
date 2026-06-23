@@ -1,4 +1,4 @@
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
 import { useAuthStore } from '../../store/authStore'
 import { useThemeStore } from '../../store/themeStore'
 import SearchBar from './SearchBar'
@@ -7,6 +7,9 @@ export default function Navbar() {
   const { isLoggedIn, logout } = useAuthStore()
   const { dark, toggleDark } = useThemeStore()
   const navigate = useNavigate()
+  const location = useLocation()
+
+  const isHomePage = location.pathname === '/'
 
   return (
     <header className="sticky top-0 z-50 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-700 shadow-sm">
@@ -18,10 +21,12 @@ export default function Navbar() {
 
         {/* Search bar — grows to fill space */}
         <div className="flex-1">
-          <SearchBar
-            compact
-            onSearch={(q) => navigate(`/search?q=${encodeURIComponent(q)}`)}
-          />
+          {!isHomePage && (
+            <SearchBar
+              compact
+              onSearch={(q) => navigate(`/search?q=${encodeURIComponent(q)}`)}
+            />
+          )}
         </div>
 
         {/* Actions */}
