@@ -4,9 +4,11 @@ import { useAuthStore } from '../store/authStore'
 import LoginForm from '../components/auth/LoginForm'
 import RegisterForm from '../components/auth/RegisterForm'
 import GoogleLoginBtn from '../components/auth/GoogleLoginBtn'
+import { useThemeStore } from '../store/themeStore'
 
 export default function AuthPage() {
   const { isLoggedIn } = useAuthStore()
+  const { dark } = useThemeStore()
   const [mode, setMode] = useState('login') // 'login' | 'register'
 
   if (isLoggedIn) return <Navigate to="/" replace />
@@ -17,7 +19,7 @@ export default function AuthPage() {
         <div className="card p-8 flex flex-col gap-6">
           {/* Logo */}
           <div className="flex flex-col items-center">
-            <img src="/logo.png" alt="CompareGo Logo" className="h-14 w-auto object-contain" />
+            <img src={dark ? "/logo-dark.jpg" : "/logo-light.jpg"} alt="CompareGo Logo" className="h-14 w-auto object-contain" />
           </div>
 
           {/* Google login */}

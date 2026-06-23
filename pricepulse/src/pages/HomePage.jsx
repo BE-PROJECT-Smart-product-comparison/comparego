@@ -1,16 +1,18 @@
 import { useNavigate } from 'react-router-dom'
 import SearchBar from '../components/common/SearchBar'
+import { useThemeStore } from '../store/themeStore'
 
 const POPULAR = ['iPhone 15', 'Samsung 65 inch TV', 'boAt earbuds', 'Realme 12 Pro', 'Laptop under 50000']
 
 export default function HomePage() {
   const navigate = useNavigate()
+  const { dark } = useThemeStore()
 
   return (
     <main className="flex flex-col items-center justify-center min-h-[80vh] px-4 text-center">
       {/* Hero */}
       <div className="mb-10 flex flex-col items-center">
-        <img src="/logo.png" alt="CompareGo Logo" className="h-24 w-auto object-contain mb-6" />
+        <img src={dark ? "/logo-dark.jpg" : "/logo-light.jpg"} alt="CompareGo Logo" className="h-24 w-auto object-contain mb-6" />
         <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white leading-tight mb-4">
           Smart Product Comparison
         </h1>
